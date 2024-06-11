@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
+    <link rel="stylesheet" href="../static/style2.css">
+    <style>
+        .warning {
+            color: red;
+        }
+        #titulo-resultado, #resultado-caue {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COSTO ANUAL UNIFORME EQUIVALENTE(CAUE)</h1>
+    </header>
+    <main>
+        <section>
+            <form id="caue-form2">
+                <input type="number" id="inversion" name="inversion" placeholder="Inversión inicial (USD)" step="any" required><br>
+                <p id="warning-inversion" class="warning"></p>
+
+                <input type="number" id="vida" name="vida" placeholder="Vida útil (años)" step="any" required><br>
+                <p id="warning-vida" class="warning"></p>
+
+                <input type="number" id="tasa" name="tasa" placeholder="Tasa de descuento (%)" step="any" required><br>
+                <p id="warning-tasa" class="warning"></p>
+
+                <input type="number" id="costo" name="costo" placeholder="Costos anuales (USD)" step="any" required><br>
+                <p id="warning-costo" class="warning"></p>
+
+                <h1 id="titulo-resultado"></h1>
+                <h2 id="resultado-caue"></h2>
+
+                <canvas id="vaueChart"></canvas>
+
+                <button type="submit">CALCULAR CAUE</button>
+                <button class="volver" type="button" onclick="volver()">VOLVER</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Proyecto Sistemas Económicos</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/caue-calA-script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>ALTERNATIVAS DE INVERSIÓN</h1>
+    </header>   
+    <main>
+        <section>
+            <button onclick="redirigirCAUE()">COSTO ANUAL UNIFORME EQUIVALENTE</button>
+            <button onclick="redirigirVAUE()">VALOR ANUAL UNIFORME EQUIVALENTE</button>
+            <!--<h2>Sobre nosotros</h2>
+            <p>Esta es una breve descripción sobre nosotros. Nuestra misión es...</p>-->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Proyecto Sistemas Económicos</p>
+    </footer>
+</body> 
+</html>
+
+<script>
+    function redirigirCAUE() {
+        window.location.href = "templates/caue.html";
+    }
+
+    function redirigirVAUE() {
+        window.location.href = "templates/vaue.html";
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>COSTO ANUAL UNIFORME EQUIVALENTE(CAUE)</h1>
+    </header>
+    <main>
+        <section>
+            <p>SELECCIONE EL CALCULO QUE DESEA REALIZAR:</p>
+            <button onclick="calcularP()">CALCULAR P</button>
+            <button onclick="calcularA()">CALCULAR A</button>
+            <button class="volver" onclick="volver()">VOLVER</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Proyecto Sistemas Económicos</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function calcularP() {
+        window.location.href = "caue-calP.html";
+    }
+
+    function calcularA() {
+        window.location.href = "caue-calA.html";
+    }
+
+    function volver() {
+        window.location.href = "../index.html";
+    }
+</script>

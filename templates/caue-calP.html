@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>COSTO ANUAL UNIFORME EQUIVALENTE(CAUE)</h1>
+    </header>
+    <main>
+        <section>
+            <form id="caue-form1">
+                <input type="number" id="inversion" name="inversion"       placeholder="Inversión inicial (USD)" required>
+                <p id="warning-inversion" class="warning"></p>
+
+                <input type="number" id="vida" name="vida"                 placeholder="Vida útil (años)" required>
+                <p id="warning-vida" class="warning"></p>
+
+                <input type="number" id="tasa" name="tasa"                 placeholder="Tasa de descuento (%)" required>
+                <p id="warning-tasa" class="warning"></p>
+
+                
+                <h1 id="titulo-resultado"></h1>
+                <h2 id="resultado-caue"></h2>
+
+                <button type="submit">CALCULAR P</button>
+                <button class="volver" onclick="volver()">VOLVER</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Proyecto Sistemas Económicos</p>
+    </footer>
+
+    <script src="../js/caue-calP-script.js"></script>
+</body>
+</html>
+
