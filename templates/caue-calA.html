@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
     <link rel="stylesheet" href="../static/style2.css">
+    <link rel='icon' href='/static/img/ilustrador.icon'>
     <style>
         .warning {
             color: red;
@@ -21,16 +22,20 @@
     <main>
         <section>
             <form id="caue-form2">
-                <input type="number" id="inversion" name="inversion" placeholder="Inversión inicial (USD)" step="any" required><br>
+                <p>Inversión inicial (USD)</p>
+                <input type="number" id="inversion" name="inversion" step="any" required><br>
                 <p id="warning-inversion" class="warning"></p>
 
-                <input type="number" id="vida" name="vida" placeholder="Vida útil (años)" step="any" required><br>
+                <p>Vida útil (años)</p>
+                <input type="number" id="vida" name="vida" step="any" required><br>
                 <p id="warning-vida" class="warning"></p>
 
-                <input type="number" id="tasa" name="tasa" placeholder="Tasa de descuento (%)" step="any" required><br>
+                <p>Tasa de descuento (%)</p>
+                <input type="number" id="tasa" name="tasa" step="any" required><br>
                 <p id="warning-tasa" class="warning"></p>
 
-                <input type="number" id="costo" name="costo" placeholder="Costos anuales (USD)" step="any" required><br>
+                <p>Costos anuales (USD)</p>
+                <input type="number" id="costo" name="costo" step="any" required><br>
                 <p id="warning-costo" class="warning"></p>
 
                 <h1 id="titulo-resultado"></h1>

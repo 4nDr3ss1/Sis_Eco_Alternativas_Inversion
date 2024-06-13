@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 datasets: [{
                     label: 'Flujo de caja',
                     data: data,
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: 'rgba(0, 81, 135, 0.5)',
                     borderWidth: 2,
                     fill: false
                 }]

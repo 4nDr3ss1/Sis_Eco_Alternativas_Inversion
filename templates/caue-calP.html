@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel='icon' href='/static/img/ilustrador.icon'>
 </head>
 <body>
     <header>
@@ -13,15 +14,21 @@
     <main>
         <section>
             <form id="caue-form1">
-                <input type="number" id="inversion" name="inversion"       placeholder="Inversión inicial (USD)" required>
+                <p>Inversión inicial (USD)</p>
+                <input type="number" id="inversion" name="inversion"        required>
                 <p id="warning-inversion" class="warning"></p>
-
-                <input type="number" id="vida" name="vida"                 placeholder="Vida útil (años)" required>
+                
+                <p>Vida útil (años)</p>
+                <input type="number" id="vida" name="vida"                  required>
                 <p id="warning-vida" class="warning"></p>
 
-                <input type="number" id="tasa" name="tasa"                 placeholder="Tasa de descuento (%)" required>
+                <p>Tasa de descuento (%)</p>
+                <input type="number" id="tasa" name="tasa"                  required>
                 <p id="warning-tasa" class="warning"></p>
 
+                <p>Ingrese la cantidad de vidas que desea calcular:</p>
+                <input type="number" id="vida_u" name="vida_u"                  required>
+                <p id="warning-vida_u" class="warning"></p>
                 
                 <h1 id="titulo-resultado"></h1>
                 <h2 id="resultado-caue"></h2>

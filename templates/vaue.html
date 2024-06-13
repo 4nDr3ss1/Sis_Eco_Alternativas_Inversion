@@ -6,6 +6,7 @@
     <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
     <link rel="stylesheet" href="../static/style2.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Añadimos Chart.js -->
+    <link rel='icon' href='/static/img/ilustrador.icon'>
 </head>
 <body>
     <header>
@@ -15,16 +16,20 @@
         <section>
             <div>
                 <form id="vaue-form">
-                    <input type="number" id="inversion" name="inversion" placeholder="Inversión inicial (USD)" required>
+                    <p>Inversión inicial (USD)</p>
+                    <input type="number" id="inversion" name="inversion" required>
                     <p id="warning-inversion" class="warning"></p>
 
-                    <input type="number" id="vida" name="vida" placeholder="Vida útil (años)" required>
+                    <p>Vida útil (años)</p>
+                    <input type="number" id="vida" name="vida" required>
                     <p id="warning-vida" class="warning"></p>
 
-                    <input type="number" id="tasa" name="tasa" placeholder="Tasa mínima atractiva (%)" required>
+                    <p>Tasa mínima atractiva (%)</p>
+                    <input type="number" id="tasa" name="tasa" required>
                     <p id="warning-tasa" class="warning"></p>
 
-                    <input type="number" id="beneficios" name="beneficios" placeholder="Beneficios Anuales (USD)" required>
+                    <p>Beneficios Anuales (USD)</p>
+                    <input type="number" id="beneficios" name="beneficios" required>
                     <p id="warning-beneficios" class="warning"></p>
 
                     <h1 id="titulo-resultado"></h1>

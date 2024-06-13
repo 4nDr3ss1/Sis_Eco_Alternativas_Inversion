@@ -10,7 +10,6 @@ body {
     font-family: "Nunito Sans", sans-serif;
     background: url('/static/img/image5.jpg') no-repeat center center fixed; 
     background-size: cover;
-    background-color: #f4f4f4;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -29,11 +28,35 @@ body::before {
 
 }
 
+.slider-container {
+    display: flex;
+    width: 55%;
+    max-width: 600px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    margin: 20px auto;
+}
+
+.slider-container img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
 header {
     background-color: #F5F5F5;
     padding: 20px;
     padding-bottom: 12px;
     box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -43,16 +66,38 @@ header h1 {
     align-items: center;
 }
 
+nav ul {
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #005187;
+}
+
 main {
     display: flex;
     flex: 1;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 main section {
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
@@ -60,49 +105,28 @@ main section {
     margin: 20px;
 }
 
-main section h1{
-    font-weight: normal;
-    font-size: 20px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
 main section h2 {
-    font-weight: normal;
-    font-size: 20px;
-    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
     text-align: center;
-    align-items: center;
-    font-weight: bold;
-
+    margin-bottom: 20px;
 }
 
-input[name="inversion"],
-input[name="vida_u"],
-input[name="beneficios"],
-input[name="vida"],
-input[name="costo"],
-input[name="tasa"] {
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: bold;
-    width: 100%;
-    height: 30px;
-    margin: 0px 0px 10px 0px;
-    padding: 0px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    outline: none;
-    border-radius: 12px;
-    color: #262626;
+main section p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-main section button {
+main section#alternativas button {
     font-family: "Nunito Sans", sans-serif;
     width: 100%;
-    min-height: 50px; /* Asegura una altura mínima */
-    padding: 10px 20px; /* Mantiene el padding interno */
+    min-height: 50px;
+    padding: 10px 20px;
     border-radius: 12px;
     border: none;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0;
     outline: none;
     font-size: 20px;
     font-weight: bold;
@@ -110,24 +134,12 @@ main section button {
     color: #ffffff;
     box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    word-wrap: break-word; /* Permite la división del texto */
-    
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-main section button:hover {
+main section#alternativas button:hover {
     background-color: #4d82be;
-}
-
-main section button.volver{
-    border: 2px solid #005187;
-    background-color: #ffffff;
-    color: #005187;
-}
-
-
-.volver:hover {
-    background-color: #eeeeee;
+    transform: scale(1.05);
 }
 
 footer {
@@ -137,11 +149,14 @@ footer {
     padding: 10px;
 }
 
-
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
 }
@@ -149,5 +164,9 @@ footer {
 @media (max-width: 480px) {
     main section {
         padding: 15px;
+    }
+
+    main section#manual embed {
+        height: 400px;
     }
 }

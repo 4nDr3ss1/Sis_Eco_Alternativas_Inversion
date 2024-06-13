@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
     margin: 0;
@@ -8,11 +9,25 @@
 
 body {
     font-family: "Nunito Sans", sans-serif;
+    background: url('/static/img/image5.jpg') no-repeat center center fixed; 
+    background-size: cover;
     background-color: #f4f4f4;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el color y la opacidad según sea necesario */
+    z-index: -1; /* Coloca la superposición detrás del contenido */
+
 }
 
 header {
@@ -94,7 +109,7 @@ main section button {
     outline: none;
     font-size: 20px;
     font-weight: bold;
-    background-color: #5E8D74;
+    background-color: #005187;
     color: #ffffff;
     box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -103,7 +118,18 @@ main section button {
 }
 
 main section button:hover {
-    background-color: #6aa083;
+    background-color: #4d82be;
+}
+
+main section button.volver{
+    border: 2px solid #005187;
+    background-color: #ffffff;
+    color: #005187;
+}
+
+
+.volver:hover {
+    background-color: #eeeeee;
 }
 
 footer {

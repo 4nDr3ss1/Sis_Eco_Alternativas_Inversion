@@ -4,32 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO SISTEMAS ECONÓMICOS 1/2024</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style-index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel='icon' href='/static/img/ilustrador.icon'>
+
 </head>
 <body>
     <header>
         <h1>ALTERNATIVAS DE INVERSIÓN</h1>
-    </header>   
+    </header>
+    <div id="inicio"> </div>
+    <nav>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#alternativas"><i class="fas fa-calculator"></i> Calculadora</a></li>
+            <li><a href="#informacion"><i class="fas fa-info-circle"></i> Información</a></li>
+            <li><a href="#ejercicio"><i class="fas fa-pencil-alt"></i> Ejercicios Propuestos</a></li>
+            <li><a href="#manual"><i class="fas fa-book"></i> Manual</a></li>
+        </ul>
+    </nav>
     <main>
+
         <section>
+            <h2>INICIO</h2>
+            <p>Bienvenidos a nuestra página de alternativas de inversión. Aquí encontrará información y herramientas para evaluar distintas opciones de inversión usando métodos económicos reconocidos.</p>
+            <div class="slider-container">  
+                <img src="/static/img/caue.jpeg" class="slider-item"/>
+                <img src="/static/img/vaue.jpeg" class="slider-item"/>
+            </div> 
+            <div id="informacion"> </div>
+            <p class="cal" style="font-weight: bold;">CALCULO RÁPIDO</p>
+            <p class="cal" style="font-weight: bold;">GRÁFICAS EN TIEMPO REAL</p>
+            <p class="cal" style="font-weight: bold;">TODO ESTO Y MÁS AL ALCANZE DE TUS MANOS Y DISPONIBLE PARA CUALQUIER DISPOSITIVO.</p>
+            
+        </section>
+        <section>
+            <h2>INFORMACIÓN</h2>
+            <h2>COSTO ANUAL UNIFORME EQUIVALENTE</h2>
+            <p>Se utiliza para comparar el costo anual de diferentes proyectos o inversiones que pueden tener diferentes vidas útiles, flujos de costos y estructuras de financiamiento.</p>
+            <p>Las formulas importantes usadas para CAUE en la página web se resumen en las siguientes:</p>
+            <img src="/static/img/image6.png" alt="Investment Options" style="width:100%; height:auto; box-shadow: 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.1);">
+            <p>ESTAS SE MODIFICARÁN DE ACUERDO A LAS ELECCIONES QUE HAGA EN LA CALCULADORA.</p>
+            <h2>VALOR ANUAL UNIFORME EQUIVALENTE</h2>
+            <p>Es el valor presente de los beneficios en una serie de pagos anuales uniformes durante la vida útil del proyecto, enfocada más hacia el flujo de los beneficios.</p>
+            <p>Las formulas importantes usadas para VAUE en la página web se resumen en las siguientes:</p>
+            <div id="alternativas"> </div>
+            <img src="/static/img/image7.png" alt="Investment Options" style="width:100%; height:auto; box-shadow: 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.1);">
+            <p>ESTAS SE MODIFICARÁN DE ACUERDO A LAS ELECCIONES QUE HAGA EN LA CALCULADORA.</p>
+        </section>
+        <section id="alternativas">
+            <h2>CALCULADORA DE INVERSIÓN</h2>
             <button onclick="redirigirCAUE()">COSTO ANUAL UNIFORME EQUIVALENTE</button>
             <button onclick="redirigirVAUE()">VALOR ANUAL UNIFORME EQUIVALENTE</button>
-            <!--<h2>Sobre nosotros</h2>
-            <p>Esta es una breve descripción sobre nosotros. Nuestra misión es...</p>-->
+            <div id="ejercicio"> </div>
+        </section>
+
+        <section id="ejercicio">
+            <h2>EJERCICIOS PROPUESTOS</h2>
+            <h1 style="color: salmon;">EJERCICIO 1</h1>
+            <p style="color: salmon;">Se desea saber la mejor alternativa para la inversión de un activo. 
+            Activo A: Exige una inversión inicial de $ 50 000 y un costo anual de operación de $ 9 500 durante 7 años.
+            Activo B: Exige una inversión inicial de $ 55 500, y un costo anual de operación de $ 8 000 durante 7 años.
+            ¿Cual activo deberíamos elegir sabiendo que la tasa de interés es del 5.5 % anual?
+            </p>
+
+            <h1 style="color: cadetblue;">EJERCICIO 2</h1>
+            <p style="color: cadetblue;">Una empresa  compra una máquina en $ 150 000 Los costos de energía y mantenimiento 
+            son estimados en $ 26 000 anuales. Si la TMA de la empresa fuera del 11 % al año y la máquina tuviera una vida 
+            útil de 5 años. Calcular  el CAUE.
+            </p>
+
+            <h1 style="color: gray;">EJERCICIO 3</h1>
+            <p style="color: gray;">Un empresario cuenta con un  presupuesto de $ 20 000 y cuenta con dos alternativas de inversión
+            Inversión A:
+            Inversión inicial: $15,000
+            Flujos de caja anuales: $4,000 durante 5 años
+            Tasa de descuento: 8%
+            Inversión B:
+            Inversión inicial: $20,000
+            Flujos de caja anuales: $5,000 durante 4 años
+            Tasa de descuento: 8%
+            Utilizando VAUE  elegir  que inversión deberíamos elegir.
+            </p>
+
+            <h1 style="color: salmon;">EJERCICIO 4</h1>
+            <p style="color: salmon;">Un proyecto tiene un costo inicial de $100,000, genera ingresos anuales de $20,000, 
+            tiene una tasa de interés del 5% anual y una vida útil de 10 años. 
+            a) Calcular el VAUE para una vida útil de 10 años.
+            </p>
+
+            <h1 style="color: cadetblue;">EJERCICIO 5</h1>
+            <p style="color: cadetblue;">Un activo tiene un costo inicial de $40,000, un costo anual de operación de $6,000, 
+            una tasa de interés del 4% anual y 5 años de vida útil. 
+            a) Calcular el CAUE para una vida útil de 5 años.
+            </p>
+            
+            <h1 style="color: gray;">EJERCICIO 6</h1>
+            <p style="color: gray;">Una empresa  compra una máquina en $ 150 000 Los costos de energía y mantenimiento 
+            son estimados en $ 26 000 anuales. Si la TMA de la empresa fuera del 11 % al año y la máquina tuviera una vida 
+            útil de 5 años. Calcular  el CAUE.
+            </p>
+
+            <h1 style="color: salmon;">EJERCICIO 7</h1>
+            <p style="color: salmon;"> Se desea determinar la mejor alternativa para la adquisición de un equipo.
+            Equipo X: Requiere una inversión inicial de $60,000 y un costo anual de operación de $10,000 durante 6 años. 
+            Equipo Y: Requiere una inversión inicial de $70,000 y un costo anual de operación de $8,500 durante 6 años.
+            ¿Cuál equipo deberíamos elegir sabiendo que la tasa de interés es del 6% anual?
+            </p>
+
+            <h1 style="color: cadetblue;">EJERCICIO 8</h1>
+            <p style="color: cadetblue;"> Un inversionista dispone de un presupuesto de $50,000 y tiene dos alternativas de inversión:
+            Inversión C:
+            Inversión inicial: $30,000
+            Flujos de caja anuales: $7,000 durante 6 años
+            Tasa mínima atractiva: 25%
+            Inversión D:
+            Inversión inicial: $45,000
+            Flujos de caja anuales: $10,000 durante 5 años
+            Tasa mínima atractiva: 25%
+            Utilizando el VAUE, determinar cuál inversión deberíamos elegir.
+            </p>       
+            
+            <h1 style="color: gray;">EJERCICIO 9</h1>
+            
+            <p style="color: gray;">Una empresa agrícola planea adquirir nueva maquinaria y tiene dos opciones:
+            Maquinaria A: Inversión inicial de $120,000 y costos anuales de mantenimiento de $20,000 durante 10 años. 
+            Maquinaria B: Inversión inicial de $100,000 y costos anuales de mantenimiento de $25,000 durante 10 años.
+            Con una tasa de interés del 5% anual, calcular el CAUE para determinar qué opción es más conveniente.                
+            </p>
+            <div id="manual"> </div>
+
+        </section>
+
+        <section id="manual">
+            <h2>MANUAL DE USUARIO</h2>
+            <p>Para consultar el manual de usuario, utilice el visor de PDF a continuación:</p>
+            <embed src="/static/document/ESCANEA EL QR.pdf" type="application/pdf" width="100%" height="600px" />
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Proyecto Sistemas Económicos</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderContainer = document.querySelector('.slider-container');
+            const slides = document.querySelectorAll('.slider-item');
+            let currentIndex = 0;
+
+            function scrollToNextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                const nextSlide = slides[currentIndex];
+                sliderContainer.scrollTo({
+                    left: nextSlide.offsetLeft,
+                    behavior: 'smooth'
+                });
+
+                if (currentIndex === slides.length - 1) {
+                    setTimeout(() => {
+                        currentIndex = -1; 
+                        sliderContainer.scrollTo({
+                            left: 0,
+                            behavior: 'auto' 
+                        });
+                    }, 7000); 
+                }
+            }
+
+            setInterval(scrollToNextSlide, 7000);
+            });
+
+
+
+        function redirigirCAUE() {
+            window.location.href = "templates/caue.html";
+        }
+
+        function redirigirVAUE() {
+            window.location.href = "templates/vaue.html";
+        }
+    </script>
 </body> 
 </html>
 
-<script>
-    function redirigirCAUE() {
-        window.location.href = "templates/caue.html";
-    }
 
-    function redirigirVAUE() {
-        window.location.href = "templates/vaue.html";
-    }
-</script>
+

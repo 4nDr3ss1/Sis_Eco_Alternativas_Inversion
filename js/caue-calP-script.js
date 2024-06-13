@@ -4,6 +4,8 @@ document.getElementById('caue-form1').addEventListener('submit', function(event)
     const inversion = document.getElementById('inversion');
     const vida = document.getElementById('vida');
     const tasa = document.getElementById('tasa');
+    const vida_u = document.getElementById('vida_u');
+
 
     let isValid = true;
 
@@ -11,6 +13,7 @@ document.getElementById('caue-form1').addEventListener('submit', function(event)
     document.getElementById('warning-inversion').innerText = '';
     document.getElementById('warning-vida').innerText = '';
     document.getElementById('warning-tasa').innerText = '';
+    document.getElementById('warning-vida_u').innerText = '';
 
     if (!inversion.checkValidity()) {
         document.getElementById('warning-inversion').innerText = 'Por favor, ingrese la inversión inicial.';
@@ -25,18 +28,32 @@ document.getElementById('caue-form1').addEventListener('submit', function(event)
         isValid = false;
     }
 
+    if (!vida_u.checkValidity()) {
+        document.getElementById('warning-vida_u').innerText = 'Por favor, ingrese la tasa de descuento.';
+        isValid = false;
+    }
+
     if (isValid) {
         //
         const tasa_decimal = parseFloat(tasa.value) / 100;
-        const precio_futuro = parseFloat(inversion.value) / Math.pow(1 + tasa_decimal, parseFloat(vida.value));
-        const resultado = precio_futuro + parseFloat(inversion.value);
+        let resultado = 0;
 
+        if(vida_u.value > 1){
+            const aux = parseFloat(vida_u.value) - 1;
+            const precio_futuro = parseFloat(inversion.value) / Math.pow(1 + tasa_decimal, vida.value*aux);
+
+            resultado += precio_futuro + parseFloat(inversion.value);
+        }else{
+            resultado = parseFloat(inversion.value);
+        }
+        
+        
 
         document.getElementById('resultado-caue').textContent = resultado.toFixed(2);
         
         document.getElementById('titulo-resultado').textContent = "El resultado de precio es:";
         
-        window.location.href = "caue-calA.html?inversion=" + resultado.toFixed(2)+ "&vida=" + vida.value*2 + "&tasa=" + tasa.value;
+        window.location.href = "caue-calA.html?inversion=" + resultado.toFixed(2)+ "&vida=" + vida.value*vida_u.value + "&tasa=" + tasa.value;
 
     }
 });
